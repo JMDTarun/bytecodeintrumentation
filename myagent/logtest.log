@@ -1,0 +1,26 @@
+Elapsed Time ..... 1002
+org.javabenchmark.instrumentation.Sleeping.customInterfaceTest(Sleeping.java:19)
+org.javabenchmark.instrumentation.AgentTest.shouldInstantiateSleepingInstance(AgentTest.java:12)
+Elapsed Time ..... 1202
+org.javabenchmark.instrumentation.Sleeping.customInterfaceTest2(Sleeping.java:38)
+org.javabenchmark.instrumentation.AgentTest.shouldInstantiateSleepingInstance(AgentTest.java:14)
+Elapsed Time ..... 1004
+org.javabenchmark.instrumentation.Sleeping.customInterfaceTest(Sleeping.java:19)
+org.javabenchmark.instrumentation.AgentTest.shouldInstantiateSleepingInstance(AgentTest.java:12)
+Elapsed Time ..... 1200
+org.javabenchmark.instrumentation.Sleeping.customInterfaceTest2(Sleeping.java:38)
+org.javabenchmark.instrumentation.AgentTest.shouldInstantiateSleepingInstance(AgentTest.java:14)
+Elapsed Time ..... 1003
+Elapsed Time ..... 1200
+Elapsed Time ..... 1003
+Elapsed Time ..... 1200
+Elapsed Time ..... 1003
+org.javabenchmark.instrumentation.Sleeping.customInterfaceTest(Sleeping.java:19)
+Elapsed Time ..... 1201
+org.javabenchmark.instrumentation.Sleeping.customInterfaceTest2(Sleeping.java:38)
+Elapsed Time ..... 1003
+org.javabenchmark.instrumentation.Sleeping.customInterfaceTest(Sleeping.java:19)
+org.javabenchmark.instrumentation.AgentTest.shouldInstantiateSleepingInstance(AgentTest.java:12)
+Elapsed Time ..... 1200
+org.javabenchmark.instrumentation.Sleeping.customInterfaceTest2(Sleeping.java:38)
+org.javabenchmark.instrumentation.AgentTest.shouldInstantiateSleepingInstance(AgentTest.java:14)

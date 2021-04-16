@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <configurations>
+    <!--<configuration location="C:/Users/mmt5133/.m2/repository/org/springframework/data/spring-data-redis/1.0.1.RELEASE/spring-data-redis-1.0.1.RELEASE.jar" className="org/springframework/data/redis/core/DefaultHashOperations" interfaceName="org.springframework.data.redis.core.HashOperations">
+	</configuration>-->
+	<logConfiguration file="F:/Hotels/myagent/logtest.log" pattern="%m%n">
+		<logPattern><![CDATA[^org\\.javabenchmark\\..*]]></logPattern>
+		<maxLines>2</maxLines>
+		<minLogTime>500</minLogTime>
+	</logConfiguration>
+	<defaultCode>
+		<after>
+			<code><![CDATA[
+			{
+				java.lang.StackTraceElement[] stackTrace = java.lang.Thread.currentThread().getStackTrace(); 
+				int kInstrumentation = 0;
+				for(int i=0;i<stackTrace.length; i++) 
+				{ 
+					if(_patternInstrumentation != null) {
+						java.util.regex.Matcher m = _patternInstrumentation.matcher(stackTrace[i].toString()); 
+						if(m.matches()) { 
+							System.out.println("Matched.......................................................... "+maxLinesInstumentation);
+							if(maxLinesInstumentation > 0) {
+								kInstrumentation++;
+								if(kInstrumentation <= maxLinesInstumentation) {
+									System.out.println("caliong &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& "+stackTrace[i]+" i is "+i); 
+									_logInstrumentation.info(stackTrace[i]);
+								}
+							} else {
+								System.out.println("caliong &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& "+stackTrace[i]+" i is "+i); 
+								_logInstrumentation.info(stackTrace[i]);
+							}
+						} 
+					} else {
+						_logInstrumentation.info(stackTrace[i]);
+					} 
+				} 
+			}
+			]]></code>
+		</after>
+		<before>
+			<code><![CDATA[
+			
+			]]></code>
+		</before>
+	</defaultCode>
+	<configuration className="org/javabenchmark/instrumentation/Sleeping" interfaceName="org.javabenchmark.instrumentation.CustomInterface">
+		<method>
+			<name>customInterfaceTest</name>
+		</method>
+		<method>
+			<name>customInterfaceTest2</name>
+		</method>
+	</configuration>
+	<configuration location="C:/Users/mmt5133/.m2/repository/org/springframework/spring-orm/3.0.5.RELEASE/spring-orm-3.0.5.RELEASE.jar" className="org/springframework/orm/hibernate3/HibernateTemplate" interfaceName="org.springframework.orm.hibernate3.HibernateOperations">
+		
+		<method>
+			<name>save</name>
+		</method>
+		<method>
+			<name>saveOrUpdate</name>
+		</method>
+		<method>
+			<name>update</name>
+		</method>
+		<method>
+			<name>get</name>
+		</method>
+		<method>
+			<name>load</name>
+		</method>
+		
+	</configuration>
+	<configuration location="C:/Users/mmt5133/.m2/repository/org/springframework/spring-orm/3.0.6.RELEASE/spring-orm-3.0.6.RELEASE.jar" className="org/springframework/orm/hibernate3/HibernateTemplate" interfaceName="org.springframework.orm.hibernate3.HibernateOperations">
+	
+		<method>
+			<name>save</name>
+		</method>
+		<method>
+			<name>saveOrUpdate</name>
+		</method>
+		<method>
+			<name>update</name>
+		</method>
+		<method>
+			<name>get</name>
+		</method>
+		<method>
+			<name>load</name>
+		</method>
+		
+		
+	</configuration>
+	<configuration location="C:/Users/mmt5133/.m2/repository/org/hibernate/hibernate-core/3.6.8.Final/hibernate-core-3.6.8.Final.jar">
+	</configuration>
+	
+	<configuration className="org/hibernate/loader/Loader">
+	</configuration>
+	
+	<configuration location="C:/Users/mmt5133/.m2/repository/org/springframework/spring-orm/3.0.5.RELEASE/spring-orm-3.0.5.RELEASE.jar" className="org/hibernate/persister/entity/AbstractEntityPersister" interfaceName="org.hibernate.persister.entity.Queryable">	
+		<method>
+			<name>getSQLInsertStrings</name>
+			<code>
+			<![CDATA[
+				for(int i=0;i<sqlInsertStrings.length; i++) 
+				{
+					System.out.println(" Insert Query Fired "+sqlInsertStrings[i]); 
+					_logInstrumentation.info(sqlInsertStrings[i]);
+				}
+			]]>
+			</code>
+			<codeInject>before</codeInject>
+		</method>
+		<method>
+			<name>getSQLUpdateStrings</name>
+			<code><![CDATA[for(int i=0;i<sqlUpdateStrings.length; i++) {System.out.println(" Insert Query Fired "+sqlUpdateStrings[i]); _logInstrumentation.info(sqlUpdateStrings[i]);}]]></code>
+			<codeInject>before</codeInject>
+		</method>
+	</configuration>	
+	
+</configurations>
